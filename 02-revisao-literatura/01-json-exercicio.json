@@ -1,0 +1,7 @@
+{
+    "aluno":{
+        "nome": "Joao",
+        "linguagem": "C",
+        "codigo":"int idade = 17"
+    }
+}
