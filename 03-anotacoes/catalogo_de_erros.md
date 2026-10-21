@@ -54,3 +54,21 @@
 * **Onde ocorre:** Dentro de condições `if`
 * **O que o aluno fez:** `if (idade = 18)` em vez de `if (idade == 18)`. O código compila, mas atribui 18 à variável e sempre retorna verdadeiro.
 * **Dica Socrática (IA):** "Dentro do 'if', você quer VERIFICAR se a idade é 18 ou QUER MUDAR a idade para 18? O símbolo de um único igual faz uma dessas coisas, e o de dois iguais faz a outra. Qual você precisa aqui?"
+
+### ERRO-SINT-005 (Confusão de Símbolos: Atribuição vs Comparação)
+* **Tipo:** Sintático / Semântico (Mistura de linguagens)
+* **Onde ocorre:** Transição do Pseudocódigo (Portugol) para C/Python.
+* **O que o aluno fez:** No Portugol, usa-se `<-` para atribuir e `=` para comparar. No C, usa-se `=` para atribuir e `==` para comparar. O aluno escreve `if (idade = 18)` em C, achando que está comparando.
+* **Dica Socrática (IA):** "Você está saindo do Portugol e indo para o C. Lembre-se que o símbolo que atribui um valor a uma variável é diferente do símbolo que verifica se dois valores são iguais. Qual deles você deve usar dentro do 'if' no C?"
+
+### ERRO-LOG-006 (Loop Infinito no "Enquanto")
+* **Tipo:** Lógico
+* **Onde ocorre:** Estruturas de repetição (While/Enquanto)
+* **O que o aluno fez:** Criou um loop `enquanto (x < 10)` mas esqueceu de colocar `x = x + 1` (ou `x++`) dentro do bloco. O programa trava rodando para sempre.
+* **Dica Socrática (IA):** "O seu programa parece que parou de responder. Olhe para a condição do seu 'enquanto'. O que precisa acontecer com a variável 'x' a cada volta do loop para que essa condição deixe de ser verdadeira em algum momento?"
+
+### ERRO-LOG-007 (Acesso a Índice Inválido em Vetores - "Index Out of Bounds")
+* **Tipo:** Lógico (Erro de Memória/Execução)
+* **Onde ocorre:** Manipulação de Arrays/Vetores
+* **O que o aluno fez:** Declarou um vetor de 5 posições `int notas[5];` e tentou acessar `notas[5]`. (Em C/Python, os índices vão de 0 a 4).
+* **Dica Socrática (IA):** "O sistema diz que você tentou acessar uma posição que não existe. Lembre-se que os computadores começam a contar do zero. Se o seu vetor tem tamanho 5, qual é o número do último índice válido?"
